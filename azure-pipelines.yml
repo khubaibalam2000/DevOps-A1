@@ -17,10 +17,10 @@ steps:
     archiveType: 'zip'
     archiveFile: '$(System.DefaultWorkingDirectory)/$(Build.BuildId).zip'
     replaceExistingArchive: true
-    
+
 - task: AzureWebApp@1
   inputs:
-    azureSubscription:  $(azureSubscription)
+    azureSubscription: 'Azure for Students(853d1aa0-ea8c-4e31-91b0-ef652f4946c2)'
     appType: 'webApp'
     appName: 'DevOpsWebApp-A1'
     package: '$(System.DefaultWorkingDirectory)/*.zip'
