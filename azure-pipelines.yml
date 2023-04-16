@@ -20,7 +20,7 @@ steps:
     
 - task: AzureWebApp@1
   inputs:
-    azureSubscription:  'Azure subscription 1(853d1aa0-ea8c-4e31-91b0-ef652f4946c2)'
+    azureSubscription:  $(azureSubscription)
     appType: 'webApp'
     appName: 'DevOpsWebApp-A1'
     package: '$(System.DefaultWorkingDirectory)/*.zip'
